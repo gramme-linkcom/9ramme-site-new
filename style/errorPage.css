@@ -1,0 +1,43 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直方向の中央揃え */
+    align-items: center;     /* 水平方向の中央揃え */
+    text-align: center;
+    /* ヘッダーとフッターを除いた画面の高さ分を確保し、コンテンツを中央に配置 */
+    min-height: calc(100vh - 70px - 180px); /* 100vh - ヘッダー高 - フッター高(おおよそ) */
+    padding: 40px 0;
+}
+
+.error-code {
+    font-size: 12rem; /* 巨大な数字 */
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.error-message {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.error-description {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 8rem;
+    }
+    .error-message {
+        font-size: 1.5rem;
+    }
+    .error-page {
+        min-height: calc(100vh - 60px - 180px); /* スマホ用ヘッダー高 */
+    }
+}
