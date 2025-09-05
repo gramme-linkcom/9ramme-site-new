@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ヘッダーを読み込んで挿入
     if (headerElement) {
-        fetch('/parts/_header.html')
+        fetch('/parts/header.html')
             .then(response => {
                 if (!response.ok) throw new Error('Network response was not ok');
                 return response.text();
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // フッターを読み込んで挿入
     if (footerElement) {
-        fetch('/parts/_footer.html')
+        fetch('/parts/footer.html')
             .then(response => {
                 if (!response.ok) throw new Error('Network response was not ok');
                 return response.text();
