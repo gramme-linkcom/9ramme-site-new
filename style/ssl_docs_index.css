@@ -1,0 +1,53 @@
+/* === 怪文章ページ === */
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding-bottom: 80px;
+}
+
+.writing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--card-bg-color);
+    border: 1px solid #444;
+    padding: 24px;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: var(--text-color);
+}
+
+.writing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    color: var(--text-color);
+}
+
+.writing-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.writing-card .writing-excerpt {
+    margin-bottom: 16px;
+    color: #ccc;
+    flex-grow: 1;
+}
+
+.writing-card .writing-meta {
+    font-size: 14px;
+    color: #aaa;
+    text-align: right;
+}
+
+/* スマホ向け調整 */
+@media (max-width: 768px) {
+    .writing-grid {
+        grid-template-columns: 1fr;
+    }
+}

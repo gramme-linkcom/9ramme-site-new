@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /practice/practice.pdf
+Disallow: /ssl_docs/

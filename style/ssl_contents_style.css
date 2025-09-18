@@ -1,0 +1,71 @@
+/* === 記事ページ === */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.document-container {
+    background-color: var(--card-bg-color);
+    padding: 30px 40px;
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+.document-header {
+    border-bottom: 2px solid #555;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center; /* ヘッダーを中央揃えに */
+}
+
+.document-header h1 {
+    font-size: 28px; /* 少しサイズを調整 */
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.document-meta {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ↓↓↓ ここからが重要な追加・修正部分です ↓↓↓ */
+.document-body {
+    max-width: 800px; /* 文章の最大幅を800pxに制限 */
+    margin: 0 auto;   /* 本文ブロックを中央に配置 */
+}
+
+.document-body h2 {
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+    margin-top: 40px;
+}
+
+.document-body p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+/* ↑↑↑ ここまでが重要な追加・修正部分です ↑↑↑ */
+
+.license-info {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.license-info .fab {
+    font-size: 20px;
+    margin: 0 2px;
+}
+
+/* スマホ向け調整 */
+@media (max-width: 768px) {
+    .document-container {
+        padding: 20px;
+    }
+}
